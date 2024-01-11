@@ -5,17 +5,20 @@
     var button = document.getElementById("askButton");
     var maxX = window.innerWidth - button.clientWidth;
     var maxY = window.innerHeight - button.clientHeight;
+
     var hoverCount = 0;
-    button.addEventListener('mouseover', function () {
+ 
+
+    button.addEventListener('mouseenter', function handleMouseEnter() {
       hoverCount++;
-      if (hoverCount === 2) {
-        alert('panne! 😊');
-      } else if (hoverCount === 3) {
-        alert('stupid panne! 😠');
-      } else if (hoverCount > 4) {
-        alert('i will kill u pannu ! 😡');
+  
+      // Show alert based on the number of hovers
+    
+      if (hoverCount === 3) {
+        alert('panne i will kill u ,buy it for me ! 😡');
       }
-    });
+    
+  });
   
     var newX = Math.floor(Math.random() * maxX);
     var newY = Math.floor(Math.random() * maxY);
