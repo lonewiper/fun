@@ -1,6 +1,3 @@
-function askSister() {
-    alert("Hey sister, will you buy this amazing and absolutely necessary product for me?");
-  }
 
 
   
@@ -32,6 +29,20 @@ function askSister() {
   
     // Append the GIF image to the body
     document.body.appendChild(gifImage);
+
+  // Create a timer element
+  var timerElement = document.createElement('div');
+  timerElement.id = 'timer';
+  timerElement.style.textAlign = 'center';
+  timerElement.style.fontSize = '40px'; // Increase font size for a digital clock look
+  timerElement.style.marginTop = '10px';
+
+  // Append the timer element to the body
+  document.body.appendChild(timerElement);
+
+  // Start the timer countdown
+  startTimer(120, timerElement);
+
   
     // Create a back button
     var backButton = document.createElement('button');
@@ -71,4 +82,21 @@ function askSister() {
 function redirectToAnotherPage() {
   // Replace 'https://example.com' with the actual URL you want to redirect to
   window.location.href = 'https://www.flipkart.com/nothing-ear-2-dual-chamber-sound-hi-res-audio-smart-anc-connection-bluetooth-headset/p/itm6d79168be59b2?pid=ACCGQFSYJMHPNFEN&lid=LSTACCGQFSYJMHPNFENYB5EX1&marketplace=FLIPKART';
+}
+
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    display.textContent = minutes + ':' + seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
 }
