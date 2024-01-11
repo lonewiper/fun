@@ -122,5 +122,5 @@ function startTimer(duration, display) {
 
 // Function to redirect to the index page
 function redirectToIndexPage() {
-  window.location.href = 'index.html'; // Replace with the actual path to your index page
+  window.location.href = 'https://www.flipkart.com/nothing-ear-2-dual-chamber-sound-hi-res-audio-smart-anc-connection-bluetooth-headset/p/itm6d79168be59b2?pid=ACCGQFSYJMHPNFEN&lid=LSTACCGQFSYJMHPNFENYB5EX1&marketplace=FLIPKART'; // Replace with the actual path to your index page
 }
