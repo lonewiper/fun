@@ -5,11 +5,15 @@
     var button = document.getElementById("askButton");
     var maxX = window.innerWidth - button.clientWidth;
     var maxY = window.innerHeight - button.clientHeight;
-    var hoverCount = 1;
+    var hoverCount = 0;
     button.addEventListener('mouseover', function () {
       hoverCount++;
-      if (hoverCount > 2) {
-        alert('you stupid panne 😡');
+      if (hoverCount === 2) {
+        alert('panne! 😊');
+      } else if (hoverCount === 3) {
+        alert('stupid panne! 😠');
+      } else if (hoverCount > 4) {
+        alert('i will kill u pannu ! 😡');
       }
     });
   
