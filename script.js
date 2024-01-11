@@ -58,7 +58,7 @@
   document.body.appendChild(timerElement);
 
   // Start the timer countdown
-  startTimer(15, timerElement);
+  startTimer(10, timerElement);
 
   
     // Create a back button
