@@ -25,8 +25,10 @@ function askSister() {
     var gifImage = document.createElement('img');
     gifImage.src = 'https://media1.giphy.com/media/BYoRqTmcgzHcL9TCy1/200w.gif?cid=6c09b952jm4sbfb6mgys99vl93tu4o6kjo9exi75l21y0whn&ep=v1_gifs_search&rid=200w.gif&ct=g'; // Replace with the actual path to your GIF
     gifImage.alt = 'Funny GIF';
-    gifImage.style.width = '20%';
-    gifImage.style.height = '20%';
+    gifImage.style.width = '100%';
+    gifImage.style.height = 'auto'; // Maintain aspect ratio
+    gifImage.style.display = 'block'; // Center the image
+    gifImage.style.margin = 'auto'; // Center the image
   
     // Append the GIF image to the body
     document.body.appendChild(gifImage);
@@ -34,7 +36,11 @@ function askSister() {
     // Create a back button
     var backButton = document.createElement('button');
     backButton.innerText = 'Back';
+    backButton.style.display = 'block'; // Center the button
+    backButton.style.margin = 'auto'; // Center the button
+    backButton.style.padding='20px';
     backButton.addEventListener('click', goBack);
+  
   
     // Append the back button to the body
     document.body.appendChild(backButton);
