@@ -41,7 +41,7 @@
   document.body.appendChild(timerElement);
 
   // Start the timer countdown
-  startTimer(120, timerElement);
+  startTimer(15, timerElement);
 
   
     // Create a back button
@@ -84,9 +84,10 @@ function redirectToAnotherPage() {
   window.location.href = 'https://www.flipkart.com/nothing-ear-2-dual-chamber-sound-hi-res-audio-smart-anc-connection-bluetooth-headset/p/itm6d79168be59b2?pid=ACCGQFSYJMHPNFEN&lid=LSTACCGQFSYJMHPNFENYB5EX1&marketplace=FLIPKART';
 }
 
+// Function to start the timer countdown and redirect after 2 minutes
 function startTimer(duration, display) {
   var timer = duration, minutes, seconds;
-  setInterval(function () {
+  var countdownInterval = setInterval(function () {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
@@ -96,7 +97,13 @@ function startTimer(duration, display) {
     display.textContent = minutes + ':' + seconds;
 
     if (--timer < 0) {
-      timer = duration;
+      clearInterval(countdownInterval); // Clear the interval
+      redirectToIndexPage(); // Redirect to the index page
     }
   }, 1000);
+}
+
+// Function to redirect to the index page
+function redirectToIndexPage() {
+  window.location.href = 'index.html'; // Replace with the actual path to your index page
 }
