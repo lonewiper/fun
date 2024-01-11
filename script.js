@@ -39,14 +39,36 @@ function askSister() {
     backButton.style.display = 'block'; // Center the button
     backButton.style.margin = 'auto'; // Center the button
     backButton.style.padding='20px';
+    backButton.style.marginTop='30px';
     backButton.addEventListener('click', goBack);
   
   
     // Append the back button to the body
     document.body.appendChild(backButton);
-  }
-  
+
+  // Create a redirect button
+  var redirectButton = document.createElement('button');
+  redirectButton.innerText = 'Flipkart';
+  redirectButton.style.display = 'block'; // Center the button
+  redirectButton.style.margin = 'auto'; // Center the button
+  redirectButton.style.marginTop='10px';
+  redirectButton.style.backgroundColor = '#007bff'; // Blue color
+  redirectButton.style.color = '#fff'; // White text color
+  redirectButton.style.border = 'none';
+  redirectButton.style.borderRadius = '5px';
+  redirectButton.style.padding = '10px';
+  redirectButton.addEventListener('click', redirectToAnotherPage);
+
+  // Append the redirect button to the body
+  document.body.appendChild(redirectButton);
+
+}
   // Function to go back to the initial content
   function goBack() {
     location.reload(); // Reload the page to restore the initial content
   }
+  // Function to redirect to another page
+function redirectToAnotherPage() {
+  // Replace 'https://example.com' with the actual URL you want to redirect to
+  window.location.href = 'https://www.flipkart.com/nothing-ear-2-dual-chamber-sound-hi-res-audio-smart-anc-connection-bluetooth-headset/p/itm6d79168be59b2?pid=ACCGQFSYJMHPNFEN&lid=LSTACCGQFSYJMHPNFENYB5EX1&marketplace=FLIPKART';
+}
