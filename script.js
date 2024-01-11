@@ -5,6 +5,13 @@
     var button = document.getElementById("askButton");
     var maxX = window.innerWidth - button.clientWidth;
     var maxY = window.innerHeight - button.clientHeight;
+    var hoverCount = 1;
+    button.addEventListener('mouseover', function () {
+      hoverCount++;
+      if (hoverCount > 1) {
+        alert('you stupid panne ');
+      }
+    });
   
     var newX = Math.floor(Math.random() * maxX);
     var newY = Math.floor(Math.random() * maxY);
@@ -12,7 +19,10 @@
     button.style.position = "absolute";
     button.style.left = newX + "px";
     button.style.top = newY + "px";
+
+    
   }
+  
 
   function askSister2() {
     // Clear all content from the page
