@@ -8,7 +8,7 @@
     var hoverCount = 1;
     button.addEventListener('mouseover', function () {
       hoverCount++;
-      if (hoverCount > 1) {
+      if (hoverCount > 3) {
         alert('you stupid panne ');
       }
     });
