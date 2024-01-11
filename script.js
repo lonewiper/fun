@@ -9,7 +9,7 @@
     button.addEventListener('mouseover', function () {
       hoverCount++;
       if (hoverCount > 3) {
-        alert('you stupid panne ');
+        alert('you stupid panne 😡');
       }
     });
   
